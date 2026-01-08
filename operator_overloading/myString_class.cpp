@@ -58,6 +58,11 @@ public:
         length=new_length;
         return *this;
     }
+   //array subscript operator
+   char& operator[](size_t index){
+       return data[index];
+   }
+   //locig operator
     friend bool operator==(const myString& left,const myString& right);
     friend bool operator!=(const myString& left,const myString& right);
     friend bool operator<(const myString& left,const myString& right);
