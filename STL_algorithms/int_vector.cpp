@@ -14,7 +14,7 @@ int main(){
 
     //all_of,any_of,non_of bu algoritmalar belli bir aralıktaki elemanların bir koşulu sağlayıp sağlamadığını kontrol eder.
     //hepsi pozitif mi?
-    bool allpositive = std::any_of(v.begin(),v.end(),[](int x){return x>0;});
+    bool allpositive = std::all_of(v.begin(),v.end(),[](int x){return x>0;});
     std::cout<<"are all elements positive? "<<(allpositive?"true":"false")<<std::endl;
     //herhangi bir eleman 9 a eşit mi
     bool anyIsNine= std::any_of(v.begin(),v.end(),[](int x){return x==9;});
@@ -35,9 +35,9 @@ int main(){
     //find ile ilk 14 elementini bul
     auto it1= std::find(v.begin(),v.end(),14);
     if(it1!=v.end()){
-        std::cout<<"5 finded and index : "<<std::distance(v.begin(),it1)<<std::endl;
+        std::cout<<"14 finded and index : "<<std::distance(v.begin(),it1)<<std::endl;
     }else{
-        std::cout<<"5 not found"<<std::endl;
+        std::cout<<"14 not found"<<std::endl;
     }
     //ilk çift elementi bul
     auto it2=std::find_if(v.begin(),v.end(),[](int x){
